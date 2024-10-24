@@ -52,7 +52,7 @@ class Voxel(Button):
     # What happens to blocks on inputs
     def input(self,key):
         if self.hovered:
-            if key == "left mouse down":
+            if key == "right mouse down":
                 punch_sound.play()
                 if block_pick == 1: voxel = Voxel(position = self.position + mouse.normal, texture = grass_texture)
                 if block_pick == 2: voxel = Voxel(position = self.position + mouse.normal, texture = stone_texture)
@@ -61,7 +61,7 @@ class Voxel(Button):
                 if block_pick == 5: voxel = Voxel(position = self.position + mouse.normal, texture = wood_texture)
 
             
-            if key == "right mouse down":
+            if key == "left mouse down":
                 punch_sound.play()
                 destroy(self)
 
